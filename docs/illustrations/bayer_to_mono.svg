@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1060" viewBox="0 0 1600 1060" role="img" aria-labelledby="title desc">
+<title id="title">Bayer RAWから補間なしでモノクロ画像を作る</title>
+<desc id="desc">重ならない2×2のRGGB画素を平均して1つの階調値へ変換。縦横は半分、画素数は4分の1。黒補正、任意のWB、平均、露出とガンマ、16bit TIFF保存の順。</desc>
+<rect width="1600" height="1060" fill="#f2f5f8"/>
+<text x="48" y="36" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="44" dominant-baseline="text-before-edge" fill="#162b43">Bayer RAW → 補間なしのモノクロ画像</text>
+<text x="48" y="102" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="27" dominant-baseline="text-before-edge" fill="#50627a">実測した4つの値を平均し、1つの階調値にまとめる</text>
+<rect x="40" y="162" width="745" height="480" rx="14" fill="#ffffff"/>
+<rect x="805" y="162" width="755" height="480" rx="14" fill="#ffffff"/>
+<text x="70" y="188" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#162b43">01  画素の対応</text>
+<text x="70" y="238" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">入力：4×4画素（RGGBの例）</text>
+<rect x="80" y="294" width="60" height="60" rx="5" fill="#d9474c"/>
+<text x="102.0625" y="310" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">R</text>
+<rect x="145" y="294" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="166.390625" y="310" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="210" y="294" width="60" height="60" rx="5" fill="#d9474c"/>
+<text x="232.0625" y="310" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">R</text>
+<rect x="275" y="294" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="296.390625" y="310" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="80" y="359" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="101.390625" y="375" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="145" y="359" width="60" height="60" rx="5" fill="#326bbc"/>
+<text x="166.7890625" y="375" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">B</text>
+<rect x="210" y="359" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="231.390625" y="375" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="275" y="359" width="60" height="60" rx="5" fill="#326bbc"/>
+<text x="296.7890625" y="375" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">B</text>
+<rect x="80" y="424" width="60" height="60" rx="5" fill="#d9474c"/>
+<text x="102.0625" y="440" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">R</text>
+<rect x="145" y="424" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="166.390625" y="440" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="210" y="424" width="60" height="60" rx="5" fill="#d9474c"/>
+<text x="232.0625" y="440" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">R</text>
+<rect x="275" y="424" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="296.390625" y="440" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="80" y="489" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="101.390625" y="505" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="145" y="489" width="60" height="60" rx="5" fill="#326bbc"/>
+<text x="166.7890625" y="505" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">B</text>
+<rect x="210" y="489" width="60" height="60" rx="5" fill="#21854c"/>
+<text x="231.390625" y="505" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">G</text>
+<rect x="275" y="489" width="60" height="60" rx="5" fill="#326bbc"/>
+<text x="296.7890625" y="505" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="25" dominant-baseline="text-before-edge" fill="#ffffff">B</text>
+<rect x="76" y="290" width="128" height="128" fill="none" stroke="#162b43" stroke-width="3"/>
+<text x="87" y="295" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="18" dominant-baseline="text-before-edge" fill="#ffffff">A</text>
+<rect x="206" y="290" width="128" height="128" fill="none" stroke="#162b43" stroke-width="3"/>
+<text x="217" y="295" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="18" dominant-baseline="text-before-edge" fill="#ffffff">B</text>
+<rect x="76" y="420" width="128" height="128" fill="none" stroke="#162b43" stroke-width="3"/>
+<text x="87" y="425" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="18" dominant-baseline="text-before-edge" fill="#ffffff">C</text>
+<rect x="206" y="420" width="128" height="128" fill="none" stroke="#162b43" stroke-width="3"/>
+<text x="217" y="425" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="18" dominant-baseline="text-before-edge" fill="#ffffff">D</text>
+<polyline points="370,421 448,421" fill="none" stroke="#162b43" stroke-width="4"/>
+<polygon points="463,421 445,411 445,431" fill="#162b43"/>
+<text x="397.0" y="374" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="23" dominant-baseline="text-before-edge" fill="#162b43">平均</text>
+<text x="508" y="278" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">出力：2×2画素</text>
+<rect x="515" y="330" width="80" height="80" rx="5" fill="#505050"/>
+<text x="547.703125" y="354" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#ffffff">A</text>
+<rect x="602" y="330" width="80" height="80" rx="5" fill="#8d8d8d"/>
+<text x="634.1171875" y="354" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#ffffff">B</text>
+<rect x="515" y="417" width="80" height="80" rx="5" fill="#b4b4b4"/>
+<text x="547.34375" y="441" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">C</text>
+<rect x="602" y="417" width="80" height="80" rx="5" fill="#dadada"/>
+<text x="633.7421875" y="441" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">D</text>
+<text x="70" y="580" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="22" dominant-baseline="text-before-edge" fill="#162b43">枠ごとに独立して処理。隣のブロックは参照しない。</text>
+<text x="835" y="188" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#162b43">02  1ブロックの計算例</text>
+<text x="835" y="239" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">黒補正・正規化後の値／WBなし</text>
+<rect x="845" y="301" width="104" height="92" rx="8" fill="#d9474c"/>
+<text x="889.3828125" y="311" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#ffffff">R</text>
+<text x="869.7890625" y="349" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="28" dominant-baseline="text-before-edge" fill="#ffffff">0.20</text>
+<rect x="959" y="301" width="104" height="92" rx="8" fill="#21854c"/>
+<text x="996.078125" y="311" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#ffffff">G1</text>
+<text x="983.7890625" y="349" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="28" dominant-baseline="text-before-edge" fill="#ffffff">0.60</text>
+<rect x="845" y="403" width="104" height="92" rx="8" fill="#21854c"/>
+<text x="882.078125" y="413" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#ffffff">G2</text>
+<text x="869.7890625" y="451" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="28" dominant-baseline="text-before-edge" fill="#ffffff">0.40</text>
+<rect x="959" y="403" width="104" height="92" rx="8" fill="#326bbc"/>
+<text x="1003.1171875" y="413" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#ffffff">B</text>
+<text x="983.7890625" y="451" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="28" dominant-baseline="text-before-edge" fill="#ffffff">0.80</text>
+<polyline points="1080,399 1145,399" fill="none" stroke="#162b43" stroke-width="4"/>
+<polygon points="1160,399 1142,389 1142,409" fill="#162b43"/>
+<rect x="1190" y="335" width="156" height="132" rx="10" fill="#808080"/>
+<text x="1255.8203125" y="355" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#ffffff">M</text>
+<text x="1236.90625" y="405" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="32" dominant-baseline="text-before-edge" fill="#ffffff">0.50</text>
+<text x="1370" y="355" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="26" dominant-baseline="text-before-edge" fill="#162b43">1画素</text>
+<text x="1370" y="404" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="26" dominant-baseline="text-before-edge" fill="#162b43">1階調値</text>
+<text x="835" y="527" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#162b43">M = (R + G1 + G2 + B) / 4</text>
+<text x="835" y="577" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="22" dominant-baseline="text-before-edge" fill="#162b43">    = (0.20 + 0.60 + 0.40 + 0.80) / 4 = 0.50</text>
+<rect x="40" y="664" width="1520" height="236" rx="14" fill="#ffffff"/>
+<text x="70" y="688" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#162b43">03  処理の順番（linearモード）</text>
+<rect x="70" y="750" width="355" height="104" rx="14" fill="#edf3f9"/>
+<text x="90" y="768" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">黒補正・正規化</text>
+<text x="90" y="812" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="21" dominant-baseline="text-before-edge" fill="#50627a">必要なら色別WBを適用</text>
+<rect x="505" y="750" width="405" height="104" rx="14" fill="#edf3f9"/>
+<text x="525" y="768" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">2×2の4値を平均</text>
+<text x="525" y="812" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="21" dominant-baseline="text-before-edge" fill="#50627a">RGB成分の補間は行わない</text>
+<rect x="990" y="750" width="540" height="104" rx="14" fill="#edf3f9"/>
+<text x="1010" y="768" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="24" dominant-baseline="text-before-edge" fill="#162b43">露出・ガンマ → 16bit化 → 保存</text>
+<text x="1010" y="812" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="21" dominant-baseline="text-before-edge" fill="#50627a">1チャンネルTIFF／Deflate可逆圧縮</text>
+<polyline points="441,799 474,799" fill="none" stroke="#162b43" stroke-width="4"/>
+<polygon points="489,799 471,789 471,809" fill="#162b43"/>
+<polyline points="926,799 959,799" fill="none" stroke="#162b43" stroke-width="4"/>
+<polygon points="974,799 956,789 956,809" fill="#162b43"/>
+<text x="48" y="926" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="30" dominant-baseline="text-before-edge" fill="#162b43">縦横1/2・総画素数1/4   ｜   2,400万画素 → 600万画素</text>
+<text x="48" y="981" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="23" dominant-baseline="text-before-edge" fill="#50627a">平均では元の4値を復元できない。保存時の可逆圧縮は、処理後の整数画素値を保持する。</text>
+<text x="48" y="1020" font-family="Noto Sans CJK JP, Noto Sans JP, sans-serif" font-size="21" dominant-baseline="text-before-edge" fill="#50627a">色はフィルターの種類を表す。階調はセンサー信号の平均であり、厳密な輝度Yではない。</text>
+</svg>
