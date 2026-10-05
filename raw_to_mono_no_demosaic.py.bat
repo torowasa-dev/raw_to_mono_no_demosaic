@@ -37,7 +37,7 @@ set "MONO_FAILURES=0"
 if "%~1"=="" goto completed
 echo.
 echo Converting: "%~1"
-"%MONO_PYTHON%" "%~dp0raw_to_mono_no_demosaic.py" "%~f1"
+"%MONO_PYTHON%" "%~dp0raw_to_mono_no_demosaic.py" "%~f1" --format both
 if errorlevel 1 set /a MONO_FAILURES+=1 >nul
 shift
 goto convert_next
